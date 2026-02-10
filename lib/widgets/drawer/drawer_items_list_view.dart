@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/core/models/drawer_item_model.dart';
 import 'package:responsive_dashboard/core/utils/app_images.dart';
-import 'package:responsive_dashboard/widgets/drawe_item.dart';
+import 'package:responsive_dashboard/widgets/drawer/drawe_item.dart';
 
 class DrawerItemsListView extends StatefulWidget {
   const DrawerItemsListView({super.key});
@@ -42,7 +42,7 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
             }
           },
           child: Padding(
-            padding: const EdgeInsets.only(top: 20),
+            padding: const EdgeInsets.only(top: 20, left: 28),
             child: DrawerItem(
               itemModel: items[index],
               isActive: indexActive == index,
