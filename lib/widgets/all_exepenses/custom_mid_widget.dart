@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/widgets/mid_widget/all_expenses.dart';
+import 'package:responsive_dashboard/widgets/all_exepenses/all_expenses.dart';
 
 class CustomMidWidget extends StatelessWidget {
   const CustomMidWidget({super.key});

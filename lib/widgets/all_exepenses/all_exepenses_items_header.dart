@@ -21,8 +21,20 @@ class AllExepensesItemsHeader extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(12),
             child: isActive
-                ? SvgPicture.asset(image, color: Colors.white)
-                : SvgPicture.asset(image, color: const Color(0xff4eb7f2)),
+                ? SvgPicture.asset(
+                    image,
+                    colorFilter: const ColorFilter.mode(
+                      Colors.white,
+                      BlendMode.srcIn,
+                    ),
+                  )
+                : SvgPicture.asset(
+                    image,
+                    colorFilter: const ColorFilter.mode(
+                      Color(0xff4eb7f2),
+                      BlendMode.srcIn,
+                    ),
+                  ),
           ),
         ),
         Icon(
