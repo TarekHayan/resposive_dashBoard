@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/core/widgets/custom_background_container.dart';
 import 'package:responsive_dashboard/widgets/mid_widget/quick_invoice/latest_transaction.dart';
 import 'package:responsive_dashboard/widgets/mid_widget/quick_invoice/quick_invoice_header.dart';
+import 'package:responsive_dashboard/widgets/mid_widget/quick_invoice/send_money_deatails.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({super.key});
@@ -15,8 +16,8 @@ class QuickInvoice extends StatelessWidget {
           QuickInvoiceHeader(),
           SizedBox(height: 24),
           LatestTransaction(),
-          SizedBox(height: 24),
-          Divider(thickness: 1, color: Color(0xffF1F1F1)),
+          Divider(thickness: 1, color: Color(0xffF1F1F1), height: 48),
+          SendMoneyDeatails(),
         ],
       ),
     );
