@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/drawer/custom_drawer.dart';
-import 'package:responsive_dashboard/widgets/all_exepenses/custom_mid_widget.dart';
+import 'package:responsive_dashboard/widgets/mid_widget/custom_mid_widget.dart';
 
 class WebLayout extends StatelessWidget {
   const WebLayout({super.key});
