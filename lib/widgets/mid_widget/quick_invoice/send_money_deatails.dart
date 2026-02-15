@@ -48,8 +48,8 @@ class SendMoneyDeatails extends StatelessWidget {
             Expanded(
               child: CustomButtom(
                 title: "Add more details",
-                ButtomColor: Colors.transparent,
-                TextColor: Color(0xff4EB7F2),
+                buttonColor: Colors.transparent,
+                textColor: Color(0xff4EB7F2),
               ),
             ),
             SizedBox(width: 24),

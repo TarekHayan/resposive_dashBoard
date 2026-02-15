@@ -12,14 +12,14 @@ class CustomTextField extends StatelessWidget {
         hint: Text(hint, style: AppStyles.styleRegular16),
         filled: true,
         fillColor: const Color(0xffFAFAFA),
-        border: Decroation(),
-        enabledBorder: Decroation(),
-        focusedBorder: Decroation(color: const Color(0xff4EB7F2)),
+        border: decoration(),
+        enabledBorder: decoration(),
+        focusedBorder: decoration(color: const Color(0xff4EB7F2)),
       ),
     );
   }
 
-  OutlineInputBorder Decroation({Color? color}) {
+  OutlineInputBorder decoration({Color? color}) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
       gapPadding: 20,
