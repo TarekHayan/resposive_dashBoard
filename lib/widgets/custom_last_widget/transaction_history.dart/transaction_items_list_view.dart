@@ -23,34 +23,11 @@ class TransactionItemsListView extends StatelessWidget {
       price: r"$20,129",
       isIncom: true,
     ),
-    TransactionItemModel(
-      title: "Juni Mobile App project",
-      date: "13 Apr, 2022 at 3:30 PM",
-      price: r"$20,129",
-      isIncom: true,
-    ),
-    TransactionItemModel(
-      title: "Juni Mobile App project",
-      date: "13 Apr, 2022 at 3:30 PM",
-      price: r"$20,129",
-      isIncom: true,
-    ),
-    TransactionItemModel(
-      title: "Juni Mobile App project",
-      date: "13 Apr, 2022 at 3:30 PM",
-      price: r"$20,129",
-      isIncom: true,
-    ),
-    TransactionItemModel(
-      title: "Juni Mobile App project",
-      date: "13 Apr, 2022 at 3:30 PM",
-      price: r"$20,129",
-      isIncom: true,
-    ),
   ];
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      shrinkWrap: true,
       scrollDirection: Axis.vertical,
       itemCount: items.length,
       itemBuilder: (context, index) {
