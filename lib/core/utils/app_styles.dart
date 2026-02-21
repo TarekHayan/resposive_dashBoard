@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/core/utils/size_config.dart';
 
 abstract class AppStyles {
-  static TextStyle styleRegular16(context) {
+  static TextStyle styleRegular16(BuildContext context) {
     return TextStyle(
       color: const Color(0xFF064060),
       fontSize: getResponsiveFontSize(context, fontSize: 16),
@@ -96,7 +96,7 @@ abstract class AppStyles {
 // sacleFactor
 // responsive font size
 // (min , max) fontsize
-double getResponsiveFontSize(context, {required double fontSize}) {
+double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
   double scaleFactor = getScaleFactor(context);
   double responsiveFontSize = fontSize * scaleFactor;
 
@@ -106,7 +106,7 @@ double getResponsiveFontSize(context, {required double fontSize}) {
   return responsiveFontSize.clamp(lowerLimit, upperLimit);
 }
 
-double getScaleFactor(context) {
+double getScaleFactor(BuildContext context) {
   // var dispatcher = PlatformDispatcher.instance;
   // var physicalWidth = dispatcher.views.first.physicalSize.width;
   // var devicePixelRatio = dispatcher.views.first.devicePixelRatio;
@@ -114,10 +114,10 @@ double getScaleFactor(context) {
 
   double width = MediaQuery.sizeOf(context).width;
   if (width < SizeConfig.tablet) {
-    return width / 600;
+    return width / 400;
   } else if (width < SizeConfig.web) {
-    return width / 1000;
+    return width / 600;
   } else {
-    return width / 1920;
+    return width / 1800;
   }
 }

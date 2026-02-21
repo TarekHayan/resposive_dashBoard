@@ -13,7 +13,7 @@ class InActiveDrawerItem extends StatelessWidget {
     return ListTile(
       leading: SvgPicture.asset(itemModel.image),
       title: FittedBox(
-        alignment: AlignmentGeometry.centerLeft,
+        alignment: AlignmentDirectional.centerStart,
         fit: BoxFit.scaleDown,
         child: Text(itemModel.title, style: AppStyles.styleMedium16(context)),
       ),
@@ -31,6 +31,7 @@ class ActiveDrawerItem extends StatelessWidget {
     return ListTile(
       leading: SvgPicture.asset(itemModel.image),
       title: FittedBox(
+        alignment: AlignmentDirectional.centerStart,
         fit: BoxFit.scaleDown,
         child: Text(itemModel.title, style: AppStyles.styleBold16(context)),
       ),

@@ -25,33 +25,42 @@ class AllExpensesitems extends StatelessWidget {
         children: [
           AllExepensesItemsHeader(image: items.image, isActive: isActive),
           const SizedBox(height: 34),
-          Text(
-            items.title,
-            style: isActive
-                ? AppStyles.styleSemiBold16(
-                    context,
-                  ).copyWith(color: Colors.white)
-                : AppStyles.styleSemiBold16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              items.title,
+              style: isActive
+                  ? AppStyles.styleSemiBold16(
+                      context,
+                    ).copyWith(color: Colors.white)
+                  : AppStyles.styleSemiBold16(context),
+            ),
           ),
           const SizedBox(height: 8),
 
-          Text(
-            items.date,
-            style: isActive
-                ? AppStyles.styleRegular14(
-                    context,
-                  ).copyWith(color: Colors.white)
-                : AppStyles.styleRegular14(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              items.date,
+              style: isActive
+                  ? AppStyles.styleRegular14(
+                      context,
+                    ).copyWith(color: Colors.white)
+                  : AppStyles.styleRegular14(context),
+            ),
           ),
           const SizedBox(height: 16),
 
-          Text(
-            items.price,
-            style: isActive
-                ? AppStyles.styleSemiBold24(
-                    context,
-                  ).copyWith(color: Colors.white)
-                : AppStyles.styleSemiBold24(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              items.price,
+              style: isActive
+                  ? AppStyles.styleSemiBold24(
+                      context,
+                    ).copyWith(color: Colors.white)
+                  : AppStyles.styleSemiBold24(context),
+            ),
           ),
         ],
       ),

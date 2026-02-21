@@ -36,30 +36,49 @@ class _AllExpensesitemsBuilderState extends State<AllExpensesitemsBuilder> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
-              if (activeIndex != index) {
-                setState(() {
-                  activeIndex = index;
-                });
-              }
+              setState(() {
+                activeIndex = 0;
+              });
             },
-            child: Padding(
-              padding: index == 1
-                  ? const EdgeInsetsGeometry.symmetric(horizontal: 12)
-                  : EdgeInsetsGeometry.zero,
-              child: AllExpensesitems(
-                items: item,
-                isActive: activeIndex == index,
-              ),
+            child: AllExpensesitems(
+              items: items[0],
+              isActive: activeIndex == 0,
             ),
           ),
-        );
-      }).toList(),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                activeIndex = 1;
+              });
+            },
+            child: AllExpensesitems(
+              items: items[1],
+              isActive: activeIndex == 1,
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                activeIndex = 2;
+              });
+            },
+            child: AllExpensesitems(
+              items: items[2],
+              isActive: activeIndex == 2,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

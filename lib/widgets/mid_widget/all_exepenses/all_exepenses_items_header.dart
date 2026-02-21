@@ -14,27 +14,36 @@ class AllExepensesItemsHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Card(
-          color: isActive ? Colors.transparent : const Color(0xffFAFAFA),
-          elevation: 0,
-          shape: const CircleBorder(),
-          child: Padding(
-            padding: const EdgeInsets.all(12),
-            child: isActive
-                ? SvgPicture.asset(
-                    image,
-                    colorFilter: const ColorFilter.mode(
-                      Colors.white,
-                      BlendMode.srcIn,
-                    ),
-                  )
-                : SvgPicture.asset(
-                    image,
-                    colorFilter: const ColorFilter.mode(
-                      Color(0xff4eb7f2),
-                      BlendMode.srcIn,
-                    ),
-                  ),
+        Flexible(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 60),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Card(
+                color: isActive ? Colors.transparent : const Color(0xffFAFAFA),
+                elevation: 0,
+                shape: const CircleBorder(),
+                child: isActive
+                    ? Center(
+                        child: SvgPicture.asset(
+                          image,
+                          colorFilter: const ColorFilter.mode(
+                            Colors.white,
+                            BlendMode.srcIn,
+                          ),
+                        ),
+                      )
+                    : Center(
+                        child: SvgPicture.asset(
+                          image,
+                          colorFilter: const ColorFilter.mode(
+                            Color(0xff4eb7f2),
+                            BlendMode.srcIn,
+                          ),
+                        ),
+                      ),
+              ),
+            ),
           ),
         ),
         Icon(
