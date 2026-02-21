@@ -17,7 +17,7 @@ class CustomDateBox extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(right: 18),
-            child: Text("Monthly", style: AppStyles.styleMedium16),
+            child: Text("Monthly", style: AppStyles.styleMedium16(context)),
           ),
           const Icon(Icons.arrow_drop_down, color: Color(0xff064061)),
         ],

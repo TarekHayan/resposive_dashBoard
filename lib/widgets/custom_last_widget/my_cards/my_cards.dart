@@ -29,7 +29,7 @@ class _MyCardState extends State<MyCard> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("My card", style: AppStyles.styleSemiBold20),
+        Text("My card", style: AppStyles.styleSemiBold20(context)),
         const SizedBox(height: 20),
         CardsPageView(pageController: pageController),
         const SizedBox(height: 19),

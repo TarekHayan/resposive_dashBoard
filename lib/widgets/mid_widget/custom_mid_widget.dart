@@ -3,17 +3,17 @@ import 'package:responsive_dashboard/widgets/mid_widget/all_exepenses/all_expens
 import 'package:responsive_dashboard/widgets/mid_widget/quick_invoice/quick_invoice.dart';
 
 class CustomMidWidget extends StatelessWidget {
-  const CustomMidWidget({super.key});
-
+  const CustomMidWidget({super.key, required this.layout});
+  final bool layout;
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        SizedBox(height: 40),
-        AllExpenses(),
-        SizedBox(height: 24),
-        QuickInvoice(),
-        SizedBox(height: 32),
+        SizedBox(height: layout ? 0 : 40),
+        const AllExpenses(),
+        const SizedBox(height: 24),
+        const QuickInvoice(),
+        SizedBox(height: layout ? 0 : 32),
       ],
     );
   }

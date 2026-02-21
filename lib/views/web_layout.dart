@@ -10,11 +10,25 @@ class WebLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Expanded(flex: 1, child: CustomDrawer()),
+        Expanded(child: CustomDrawer()),
         SizedBox(width: 32),
-        Expanded(flex: 3, child: CustomMidWidget()),
-        SizedBox(width: 24),
-        Expanded(flex: 2, child: CustomLastWidget()),
+        Expanded(
+          flex: 5,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(flex: 2, child: CustomMidWidget(layout: false)),
+                    SizedBox(width: 24),
+                    Expanded(child: CustomLastWidget(layout: false)),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }

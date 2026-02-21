@@ -26,16 +26,19 @@ class TransactionItemsListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      scrollDirection: Axis.vertical,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 12),
-          child: TransactionItem(items: items[index]),
-        );
-      },
+    return Column(
+      children: items.map((e) => TransactionItem(items: e)).toList(),
     );
+    // return ListView.builder(
+    //   shrinkWrap: true,
+    //   scrollDirection: Axis.vertical,
+    //   itemCount: items.length,
+    //   itemBuilder: (context, index) {
+    //     return Padding(
+    //       padding: const EdgeInsets.only(bottom: 12),
+    //       child: TransactionItem(items: items[index]),
+    //     );
+    //   },
+    // );
   }
 }

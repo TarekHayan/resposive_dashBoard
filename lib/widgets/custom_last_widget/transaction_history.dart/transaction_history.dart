@@ -14,9 +14,9 @@ class TransactionHistory extends StatelessWidget {
         const SizedBox(height: 20),
         Text(
           "13 April 2022",
-          style: AppStyles.styleMedium16.copyWith(
-            color: const Color(0xffAAAAAA),
-          ),
+          style: AppStyles.styleMedium16(
+            context,
+          ).copyWith(color: const Color(0xffAAAAAA)),
         ),
         const SizedBox(height: 16),
         const TransactionItemsListView(),
@@ -33,12 +33,12 @@ class TransactionHistoryHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text("Transaction History", style: AppStyles.styleSemiBold20),
+        Text("Transaction History", style: AppStyles.styleSemiBold20(context)),
         Text(
           "See all",
-          style: AppStyles.styleMedium16.copyWith(
-            color: const Color(0xff4EB7F2),
-          ),
+          style: AppStyles.styleMedium16(
+            context,
+          ).copyWith(color: const Color(0xff4EB7F2)),
         ),
       ],
     );

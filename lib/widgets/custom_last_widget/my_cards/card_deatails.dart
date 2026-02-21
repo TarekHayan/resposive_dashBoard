@@ -29,33 +29,38 @@ class CardDeatails extends StatelessWidget {
               ),
               title: Text(
                 "Name card",
-                style: AppStyles.styleRegular16.copyWith(color: Colors.white),
+                style: AppStyles.styleRegular16(
+                  context,
+                ).copyWith(color: Colors.white),
               ),
-              subtitle: Text("Syah Bandi", style: AppStyles.styleMedium20),
+              subtitle: Text(
+                "Syah Bandi",
+                style: AppStyles.styleMedium20(context),
+              ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
             const Expanded(child: SizedBox()),
             Padding(
-              padding: const EdgeInsets.only(bottom: 27, right: 24),
+              padding: const EdgeInsets.only(right: 48 - 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
-                    "0918 8124 0042 8129",
-                    style: AppStyles.styleSemiBold24.copyWith(
-                      color: Colors.white,
-                    ),
+                    '0918 8124 0042 8129',
+                    style: AppStyles.styleSemiBold24(
+                      context,
+                    ).copyWith(color: Colors.white),
                   ),
-                  const SizedBox(height: 12),
                   Text(
-                    "12/20 - 124",
-                    style: AppStyles.styleRegular16.copyWith(
-                      color: Colors.white,
-                    ),
+                    '12/20 - 124',
+                    style: AppStyles.styleRegular16(
+                      context,
+                    ).copyWith(color: Colors.white),
                   ),
                 ],
               ),
             ),
+            const Flexible(child: SizedBox(height: 54 - 28)),
           ],
         ),
       ),

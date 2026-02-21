@@ -16,8 +16,11 @@ class LatestTransactionItem extends StatelessWidget {
       ),
       child: ListTile(
         leading: SvgPicture.asset(items.image),
-        title: Text(items.title, style: AppStyles.styleSemiBold16),
-        subtitle: Text(items.subTitle, style: AppStyles.styleRegular12),
+        title: Text(items.title, style: AppStyles.styleSemiBold16(context)),
+        subtitle: Text(
+          items.subTitle,
+          style: AppStyles.styleRegular12(context),
+        ),
       ),
     );
   }
